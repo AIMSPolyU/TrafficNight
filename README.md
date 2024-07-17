@@ -107,7 +107,7 @@ python predict.py
 
 
 # Citation
-**Download the Paper**: [Download PDF](link_to_your_paper)
+<!-- **Download the Paper**: [Download PDF](link_to_your_paper) -->
 
 If you use DeepTraffic Dataset in your research , please use the following BibTeX entry.
 ```BibTeX
