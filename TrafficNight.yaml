@@ -1,0 +1,16 @@
+path: ../datasets/trafficnight # dataset root dir
+train: images/train 
+val: images/val 
+test: 
+
+# Classes for TrafficNight1.0
+names:
+  0: Car
+  1: Buses
+  2: Trucks
+  3: Tractor
+  4: Semi-Trailers
+  5: Empty Semi-Trailers
+
+# Download script/URL (optional)
+# download: https://github.com/
