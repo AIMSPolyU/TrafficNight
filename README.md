@@ -30,7 +30,7 @@ This comprehensive dataset, collected using drones, includes:
 # Manually Download
 #### Image and Json Label Data
 - [ FIR OBB Detection](https://drive.google.com/file/d/1ge9FXrhaSszlEOVQdR1CQxc0nDVh1QJ5/view?usp=sharing)
-- [ sRGB OBB Detection](https://drive.google.com/file/d/1ge9FXrhaSszlEOVQdR1CQxc0nDVh1QJ5/view?usp=sharing)
+<!-- - [ sRGB OBB Detection](https://drive.google.com/file/d/1ge9FXrhaSszlEOVQdR1CQxc0nDVh1QJ5/view?usp=sharing) -->
 
 #### Raw Videos:
 - [Block 0](https://drive.google.com/file/d/14FE8g2-7zjmQdtDDtMA_PoxGhisU13gn/view?usp=drive_link)
@@ -110,15 +110,15 @@ python predict.py
 <!-- **Download the Paper**: [Download PDF](link_to_your_paper) -->
 
 If you use DeepTraffic Dataset in your research , please use the following BibTeX entry.
-```BibTeX
+<!-- ```BibTeX
 @InProceedings{Zhang24,
       title = {TrafficNight: An Aerial Multimodal Benchmark For Nighttime Vehicle Surveillance},
       author = {Zhang, Guoxing and Liu, Yiming and Yang, Xiaoyu and Huang, Chao and  Huang, Hailong},
-      booktitile = {The European Conference on Computer Vision},
+      booktitile = {ECCV},
       year = {2024}
 
 }
-```
+``` -->
 
 <!-- # New Project 
 
