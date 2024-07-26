@@ -30,7 +30,7 @@ This comprehensive dataset, collected using drones, includes:
 # Manually Download
 ### (1) Image and Json Label Data
 - [ FIR OBB Detection](https://drive.google.com/file/d/1ge9FXrhaSszlEOVQdR1CQxc0nDVh1QJ5/view?usp=sharing)
-<!-- - [ sRGB OBB Detection](https://drive.google.com/file/d/1ge9FXrhaSszlEOVQdR1CQxc0nDVh1QJ5/view?usp=sharing) -->
+- [ sRGB OBB Detection](https://drive.google.com/file/d/1CfLUlaJ9N2HdfEi3qEZ8Sfa0aUJw9rR9/view?usp=sharing)
 
 ### (2) Raw Videos
 Access Password
@@ -48,9 +48,8 @@ Access Password
 - [HDMAP Files](https://drive.google.com/drive/folders/1AfnrxAYxN7FFATbxkeWEHJ_hQYc3aKI3?usp=sharing)
 
 ### (4) Pre-Train Model:
-- [Yolov8n](https://drive.google.com/file/d/1NIM3Dma9rouvxNsTV2d5865xmIJLEFfg/view?usp=drive_link)
-- [Yolov8m](https://drive.google.com/file/d/1NIM3Dma9rouvxNsTV2d5865xmIJLEFfg/view?usp=drive_link) 
-
+- [Yolov8m-FIR](https://drive.google.com/file/d/1NIM3Dma9rouvxNsTV2d5865xmIJLEFfg/view?usp=drive_link)
+- [Yolov8m-sRGB](https://drive.google.com/file/d/1tYXZneBFwLfrHk2JLmTZi7RaJum61JnG/view?usp=drive_link)
 
 # Tookit
 Recommend running the following command script for automatic data download and extraction into the current project. 
