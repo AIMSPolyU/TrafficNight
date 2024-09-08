@@ -51,7 +51,7 @@ Access Password
 - [Yolov8m-FIR](https://drive.google.com/file/d/1NIM3Dma9rouvxNsTV2d5865xmIJLEFfg/view?usp=drive_link)
 - [Yolov8m-sRGB](https://drive.google.com/file/d/1tYXZneBFwLfrHk2JLmTZi7RaJum61JnG/view?usp=drive_link)
 
-# Tookit
+# Tookit Env
 Recommend running the following command script for automatic data download and extraction into the current project. 
 
 - Clone Git Project
@@ -102,20 +102,56 @@ python train.py
 ```
 python predict.py
 ```
-<!-- - [Convert UV-Coordinates (image) To Physic World](Doc/TrainingYolo8Seg.md) -->
 
-<!-- ## (3) Mapping Toolkit
+## (4) Mapping Toolkit
+<!-- ### [Temperature mapping tool](Doc/TrackingYolo8.md) -->
 
-### [Temperature mapping tool](Doc/TrackingYolo8.md)
+### 4.1 Convert UV-Coordinates (image) To Physic World
+```
+python toolkit/Get3DPose.py --video_json <path_to_video_json> --dsm_path <path_to_dsm_file> --ort_path <path_to_ortho_image> --ort_json <path_to_ortho_json> --track_csv <path_to_trackAsVideo_result>
+```
+- **--video_json**:
+  - Path to the JSON file containing metadata for the input video. This file typically includes reference point UV coordinates. It is used to match the reference points in `ort_json` and calculate the camera's external pose parameters.
 
-### [Convert UV-Coordinates (image) To Physic World](Doc/TrackingYolo8.md) -->
+  - Example:
+  `'/usr/src/TrafficNight/TN_RawVedio/TN03/TN10281958.json'`
+
+- **--dsm_path**:
+  - Path to the DSM (Digital Surface Model) file, which contains elevation data for the terrain in the video. This file is used to improve the accuracy of 3D pose calculations by incorporating terrain height information.
+
+  - Example:
+  `'/usr/src/TrafficNight/Physics/TN03_dsm_20cm.tif'`
+
+- **--ort_path**:
+  - Path to the orthophoto (ortho image) file, a georeferenced aerial image that provides a 2D spatial view of the video area, aligned with geographic features.
+
+  - Example:
+  `'/usr/src/TrafficNight/Physics/TN03_ort.tif'`
+
+- **--ort_json**:
+  - Path to the JSON metadata file for the orthophoto. This file contains the UV coordinates of the ground reference point, and the script will obtain the longitude and latitude information based on this UV coordinate.
+
+  - Example:
+  `'/usr/src/TrafficNight/Physics/TN03_ort.json'`
+
+- **--track_csv**:
+  - Path to the csv file containing yolo track result. 
+
+  - Example:
+  `'/usr/src/TrafficNight/trackRes/TN03_DJI_20231028195825_0001_T_24hz_with_enu.csv'`
+
+
+
+<p align="center">
+  <img src="assets\Track3D.gif" alt="Mapping 2D UV to 3D", width="80%">
+</p>
 
 
 # Citation
 <!-- **Download the Paper**: [Download PDF](link_to_your_paper) -->
 
 If you use DeepTraffic Dataset in your research , please use the following BibTeX entry.
-<!-- ```BibTeX
+```BibTeX
 @InProceedings{Zhang24,
       title = {TrafficNight: An Aerial Multimodal Benchmark For Nighttime Vehicle Surveillance},
       author = {Zhang, Guoxing and Liu, Yiming and Yang, Xiaoyu and Huang, Chao and  Huang, Hailong},
@@ -123,7 +159,7 @@ If you use DeepTraffic Dataset in your research , please use the following BibTe
       year = {2024}
 
 }
-``` -->
+```
 
 <!-- # New Project 
 

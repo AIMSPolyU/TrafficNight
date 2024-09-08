@@ -2,6 +2,7 @@ import cv2 as cv
 import numpy as np
 import pandas as pd
 import json, csv
+import argparse
 
 import pymap3d
 import rasterio
@@ -563,16 +564,32 @@ class Tracker3D():
         video_writer.release()
  
 if __name__ == "__main__":
-    dt = Tracker3D(video_json = '/usr/src/TrafficNight/TN_RawVedio/TN03/TN10281958.json',
-                   dsm_path = '/usr/src/TrafficNight/Physics/TN03_dsm_20cm.tif',
-                   ort_path = '/usr/src/TrafficNight/Physics/TN03_ort.tif',
-                   ort_json = '/usr/src/TrafficNight/Physics/TN03_ort.json')
+    # Create argument parser
+    parser = argparse.ArgumentParser(description="Get 3D pose from video metadata and geospatial data.")
+
+    # Add arguments
+    parser.add_argument('--video_json', type=str, required=True, help='Path to the JSON file containing metadata for the input video.')
+    
+    parser.add_argument('--dsm_path', type=str, required=True, help='Path to the DSM (Digital Surface Model) file containing elevation data.')
+    parser.add_argument('--ort_path', type=str, required=True, help='Path to the orthophoto (ortho image) file providing 2D spatial data.')
+    parser.add_argument('--ort_json', type=str, required=True, help='Path to the JSON file containing metadata for the orthophoto.')
+    parser.add_argument('--track_csv', type=str, required=True, help='Path to the csv file containing yolo track result.')
+
+    # Parse the arguments
+    args = parser.parse_args()
+
+    # Example usage in the script
+    dt = Tracker3D(video_json=args.video_json,
+                dsm_path=args.dsm_path,
+                ort_path=args.ort_path,
+                ort_json=args.ort_json)
+    
     dt.initCamPose()
 
     fov_points_nosc = dt.DrawCameraView()
     
-    dt.rayTrackAgent_mThread('/usr/src/TrafficNight/trackRes/TN03_DJI_20231028195825_0001_T_24hz.csv')
+    dt.rayTrackAgent_mThread(args.track_csv)
     
-    dt.drawAgents_withfov('/usr/src/TrafficNight/trackRes/TN03_DJI_20231028195825_0001_T_24hz_with_enu.csv', 
-                          '/usr/src/TrafficNight/TN03_DJI_20231028195825_0001_T_24hz_TrackwithOrt.MP4', fov_points_nosc)
+    # dt.drawAgents_withfov('/usr/src/TrafficNight/trackRes/TN03_DJI_20231028195825_0001_T_24hz_with_enu.csv', 
+    #                       '/usr/src/TrafficNight/TN03_DJI_20231028195825_0001_T_24hz_TrackwithOrt.MP4', fov_points_nosc)
     
