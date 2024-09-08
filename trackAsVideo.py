@@ -118,7 +118,7 @@ def process_video(input_video_path, output_video_path, model_path, output_csv_pa
 
 if __name__ == "__main__":
     '''
-    python process_video.py --input_video /path/to/input/video.mp4 --output_video /path/to/output/video.mp4 --model /usr/src/TrafficNight/weights/yolov8m-obb/best.pt --output_csv /usr/src/TrafficNight/trackRes/TN03_DJI_20231028195825_0001_T_24hz.csv
+    python trackAsVideo.py --input_video /path/to/input/video.mp4 --output_video /path/to/output/video.mp4 --model /usr/src/TrafficNight/weights/yolov8m-obb/best.pt --output_csv /usr/src/TrafficNight/trackRes/TN03_DJI_20231028195825_0001_T_24hz.csv
 
     model='/usr/src/TrafficNight/weights/yolov8m-obb/best.pt' 
     input_video= '/usr/src/TrafficNight/TN03_DJI_20231028195825_0001_T_24hz.MP4'

@@ -98,10 +98,35 @@ we use [ultralytics](https://github.com/ultralytics/ultralytics) to train yolov8
 python train.py
 ```
 
-## (3) Prediction on image or dir
+## (3) Track on video
 ```
-python predict.py
+python trackAsVideo.py --input_video <path_to_video> --output_video <path_to_output_video>  --model /usr/src/TrafficNight/weights/yolov8m-obb/best.pt --output_csv <save_track_result>
 ```
+
+- **--input_video**:
+  - Path to the input video file that will be processed for object tracking.
+  
+  - **Example**:  
+    `/path/to/input/video.mp4`
+
+- **--output_video**:
+  - Path to save the output video file, which will contain object annotations (bounding boxes) based on YOLOv8 tracking results.
+  
+  - **Example**:  
+    `/path/to/output/video.mp4`
+
+- **--model**:
+  - Path to the YOLOv8 model file used for object detection and tracking. The default path is `/usr/src/TrafficNight/weights/yolov8m-obb/best.pt`, but it can be replaced with any compatible YOLOv8 model.
+  
+  - **Example**:  
+    `/usr/src/TrafficNight/weights/yolov8m-obb/best.pt`
+
+- **--output_csv**:
+  - Path to save the CSV file that contains tracking data such as object IDs, class labels, and bounding box coordinates for each frame.
+  
+  - **Example**:  
+    `/usr/src/TrafficNight/trackRes/TN03_DJI_20231028195825_0001_T_24hz.csv`
+
 
 ## (4) Mapping Toolkit
 <!-- ### [Temperature mapping tool](Doc/TrackingYolo8.md) -->
