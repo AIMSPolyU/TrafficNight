@@ -45,10 +45,14 @@ Access Password
 
 
 ### (3) HD-MAP files (opendrive.xord/apollo.bin):
-- [HDMAP Files](https://drive.google.com/drive/folders/1AfnrxAYxN7FFATbxkeWEHJ_hQYc3aKI3?usp=sharing)
+Access Password
+`trafficnight`
+- [HDMAP Files (zip)](https://gofile.me/7rhQP/BkFutCfv3)
 
 ### (4) Pre-Train Model:
-- [Yolov8m-FIR](https://drive.google.com/file/d/1NIM3Dma9rouvxNsTV2d5865xmIJLEFfg/view?usp=drive_link)
+Access Password
+`trafficnight`
+- [Yolov8m-FIR](https://gofile.me/7rhQP/nGBkPZoM7)
 - [Yolov8m-sRGB](https://drive.google.com/file/d/1tYXZneBFwLfrHk2JLmTZi7RaJum61JnG/view?usp=drive_link)
 
 # Tookit Env
